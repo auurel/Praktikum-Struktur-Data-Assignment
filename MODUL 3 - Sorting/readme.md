@@ -8,9 +8,9 @@
 Sorting atau pengurutan adalah proses menyusun elemen-elemen dari masukan awal acak menjadi keluaran akhir tertata dengan urutan tertentu. Proses tersebut diimplementasikan dalam bermacam aplikasi. Pengurutan memberikan fleksibilitas dalam penyajian data kepada penggunanya, pengguna dapat dengan mudah melakukan analisa dan memahami isi informasi yang terkandung didalam data tersebut.
 
 Contoh sorting:
-Data acak       : 5 6 8 1 3 25 10
-Ascending       : 1 3 5 6 8 10 25
-Descending      : 25 10 8 6 5 3 1
+- Data acak       : 5 6 8 1 3 25 10
+- Ascending       : 1 3 5 6 8 10 25
+- Descending      : 25 10 8 6 5 3 1
 
 ### 1. Insertion sort
 
@@ -158,7 +158,8 @@ int main() {
 
     cout << "\nUrutan karakter setelah sorting: " << endl;
     print_array(a, length);
-}```
+}
+```
 
 #### Output
 
