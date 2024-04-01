@@ -318,9 +318,9 @@ int main() {
 
 #### Output
 
-![Screenshot (1226)](https://github.com/auurel/sorting/assets/152810893/08a9e251-79cb-4dff-bad8-7b640492bfd5)
+![Screenshot (1226)](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/c5f7a82a-9780-4099-989f-e038b404b21f)
 
-![Screenshot (1227)](https://github.com/auurel/sorting/assets/152810893/2079d30f-364b-425e-b69f-984c69c4ba8c)
+![Screenshot (1227)](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/a3f3d2d1-f799-4e28-b50e-8afd7ff220fb)
 
 Kode di atas meminta pengguna untuk memasukkan sebuah bilangan `n`, dan kemudian meminta pengguna untuk memasukkan `n karakter`. Setelah itu, program akan mengurutkan karakter tersebut dalam urutan menaik (ascending) dan menurun (descending). Pada bagian awal program, dilakukan include dari beberapa library yang dibutuhkan, yaitu `iostream`, `algorithm`, dan `vector`.
 Deklarasi using namespace std; digunakan untuk mengakses semua nama dari standard namespace tanpa harus menuliskan std:: sebelumnya.
