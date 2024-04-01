@@ -301,9 +301,7 @@ Pernyataan switch digunakan untuk melakukan tindakan berbeda berdasarkan nilai p
 - Kasus 1: Program menemukan nilai maksimum dalam array angka dengan menginisialisasi variabel max ke nilai integer minimum dan kemudian melakukan iterasi melalui array, memperbarui max dengan elemen saat ini jika lebih besar dari nilai max saat ini.
 - Kasus 2: Program menemukan nilai minimum dalam array angka dengan menginisialisasi variabel min ke nilai integer maksimum dan kemudian melakukan iterasi melalui array, memperbarui min dengan elemen saat ini jika kurang dari nilai min saat ini.
 - Kasus 3: Program menemukan nilai rata-rata array angka dengan menginisialisasi jumlah variabel menjadi 0 dan kemudian melakukan iterasi melalui array, menambahkan nilai setiap elemen ke jumlah. Rata-rata kemudian dihitung dengan membagi jumlah dengan ukuran array dan menggandakan hasilnya.
-
 - Kasus 4: Program keluar dengan memanggil fungsi exit() dengan kode status 0.
-
 - Default: Program menampilkan pesan kesalahan jika pengguna memasukkan pilihan yang tidak valid.
 Program mengembalikan 0 untuk menunjukkan eksekusi berhasil.
 Singkatnya, program ini mengambil serangkaian bilangan bulat sebagai masukan dan memungkinkan pengguna menemukan nilai maksimum, minimum, atau rata-ratanya.
