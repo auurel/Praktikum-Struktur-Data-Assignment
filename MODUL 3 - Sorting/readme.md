@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul Sorting</h1>
+# <h1 align="center">Laporan Praktikum Algoritma Struktur Data</h1>
 <p align="center">Indy Aurellia Az Zahra</p>
 
 ## Dasar Teori
