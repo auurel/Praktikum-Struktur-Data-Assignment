@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul Sorting</h1>
+# <h1 align="center">Laporan Praktikum Algoritma Struktur Data</h1>
 <p align="center">Indy Aurellia Az Zahra</p>
 
 ## Dasar Teori
@@ -105,9 +105,9 @@ int main() {
 
 #### Outuput
 
-![Screenshot (1216)](https://github.com/auurel/sorting/assets/152810893/29a6550c-c07e-45d0-b63a-fd4f58382ebc)
+![Screenshot (1235)](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/ed8b3a2e-921f-4d7a-b92f-d4676c00b677)
 
-![Screenshot (1217)](https://github.com/auurel/sorting/assets/152810893/e9fdcdc3-79e9-41e0-8ef0-baa3b2a02cb1)
+![Screenshot (1233)](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/52cd8534-1b7e-4895-80b7-a1bf0d77fc17)
 
 Kode diatas menunjukan algoritma pengurutan untuk mengurutkan array angka float (desimal) secara ascending. 
 Fungsi `bubble_sort()` sendiri digunakan untuk mengambil array elemen panjang dan mengurutkannya ditempatnya.
@@ -163,10 +163,9 @@ int main() {
 
 #### Output
 
-![Screenshot (1218)](https://github.com/auurel/sorting/assets/152810893/415ead6b-5e96-4865-9406-a7a50aac69df)
+![Screenshot (1236)](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/e6d4999f-5353-4a88-b015-2d9dcfc933c6)
 
-![Screenshot (1219)](https://github.com/auurel/sorting/assets/152810893/40674b3e-27eb-4d3a-a0ba-9605b813cbcc)
-
+![Screenshot (1237)](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/f7f9388c-eedf-431e-b91f-519d5b393a60)
 
 Kode diatas mengimplementasikan algoritma sorting Insertion sort untuk mengurutkan array karakter. Fungsi `insertion_sort` sendiri adalah untuk menerima dua parameter, yaitu `arr` dan panjangnya `length`
 Dalam fungsi `insertion_sort`, dilakukan perulangan untuk setiap elemen dalam array, kecuali elemen pertama. Untuk setiap elemen, dilakukan perulangan ke belakang sampai elemen tersebut berada di posisi yang tepat atau sampai ketemu elemen yang lebih kecil. Setiap perulangan, elemen yang lebih kecil digeser ke belakang, sampai elemen tersebut ditemukan.
@@ -220,9 +219,9 @@ int main() {
 
 #### Output:
 
-![Screenshot (1220)](https://github.com/auurel/sorting/assets/152810893/ca068fb5-8154-4728-9414-7423b44ff468)
+![Screenshot (1231)](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/453bd5b5-6a3d-4549-81ed-aa7dd62a4689)
 
-![Screenshot (1221)](https://github.com/auurel/sorting/assets/152810893/4ce1222f-3ed6-495f-9933-a907c4cf0697)
+![Screenshot (1232)](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/13a5d278-33d5-4ded-bdb3-15b53100a101)
 
 Kode di atas adalah program yang mengurutkan array nilai IPS mahasiswa dengan menggunakan algoritma selection sort. Program ini memiliki fungsi `ipsmhs` (IPS Mahasiswa) yang menerima dua parameter yaitu array `arr` dan panjangnya `length`.
 Dalam fungsi `ipsmhs`, dilakukan perulangan untuk mencari nilai minimum dan posisi index pada setiap iterasi. Untuk setiap iterasi, dilakukan perulangan lanjutan untuk membandingkan nilai dengan nilai yang lebih kecil dari index yang lebih besar. Jika nilai yang lebih kecil ditemukan, maka nilai minimum dan posisi indexnya akan diganti dengan nilai dan posisi indeks yang lebih kecil tersebut. Setelah perulangan lanjutan selesai, dilakukan operasi swap untuk menukar nilai antara posisi minimum dan posisi indeks saat ini.
@@ -269,9 +268,9 @@ int main() {
 
 #### Output:
 
-![Screenshot (1222)](https://github.com/auurel/sorting/assets/152810893/1851a32d-c6b7-498f-907d-ff04c17d7bd7)
+![Screenshot (1230)](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/90b22f56-7779-4e8a-adfa-0387edb00ef9)
 
-![Screenshot (1223)](https://github.com/auurel/sorting/assets/152810893/199ec048-6f2b-4bf5-9a97-2f7fd3a67d55)
+![output 2](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/3206317f-f545-4fa5-b552-ce168f7be006)
 
 Kode di atas merupakan program yang digunakan untuk mengurutkan sebuah array of string menggunakan metode Bubble Sort. Pada bagian awal program, kita mendeklarasikan fungsi bubblesort yang menerima dua parameter, yaitu array of string `arr` dan panjang array `n`. Dalam fungsi bubblesort, kita melakukan perulangan sebanyak `n-1` kali, yang mana pada setiap perulangan, kita akan membandingkan dua elemen string yang berdekatan. Jika kedua elemen tersebut tidak terurut, maka kita akan melakukan swap, sehingga elemen yang lebih besar akan dipindahkan ke posisi yang lebih belakang. Setelah fungsi bubblesort dipanggil di bagian main, kita akan mencetak isi array sebelum dan sesudah diurutkan, yang mana akan menunjukkan efektivitas dari metode Bubble Sort.
 
@@ -318,9 +317,9 @@ int main() {
 
 #### Output
 
-![Screenshot (1226)](https://github.com/auurel/sorting/assets/152810893/08a9e251-79cb-4dff-bad8-7b640492bfd5)
+![Screenshot (1226)](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/c5f7a82a-9780-4099-989f-e038b404b21f)
 
-![Screenshot (1227)](https://github.com/auurel/sorting/assets/152810893/2079d30f-364b-425e-b69f-984c69c4ba8c)
+![Screenshot (1227)](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/a3f3d2d1-f799-4e28-b50e-8afd7ff220fb)
 
 Kode di atas meminta pengguna untuk memasukkan sebuah bilangan `n`, dan kemudian meminta pengguna untuk memasukkan `n karakter`. Setelah itu, program akan mengurutkan karakter tersebut dalam urutan menaik (ascending) dan menurun (descending). Pada bagian awal program, dilakukan include dari beberapa library yang dibutuhkan, yaitu `iostream`, `algorithm`, dan `vector`.
 Deklarasi using namespace std; digunakan untuk mengakses semua nama dari standard namespace tanpa harus menuliskan std:: sebelumnya.
