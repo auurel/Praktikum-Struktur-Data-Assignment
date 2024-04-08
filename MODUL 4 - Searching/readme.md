@@ -11,12 +11,12 @@ A. Sequential Search
 Sequential Searching merupakan algoritma pencarian beruntun  yang  prosesnya  membandingkan  setiap elemen  satu  persatu  secara  beruntun,  mulai  dari elemen  pertama  sampai  elemen  yang  di  cari  di temukan  atau  seluruh  elemen  sudah  di  periks. Sequential search termasuk kedalam teknik pencarian data array yang paling mudah, dimana data dalam array dibaca satu demi satu dan diurutkan dari index terkecil ke index terbesar, maupun sebaliknya. Pencarian terhadap elemen data array dapat dalam kondisi belum terurut dan sudah terurut.
         
 Perbedaanya dapat dirincikan seperti berikut :
-- 1) Data yang belum terurut :
-        - (a) Secara umum pencarian berjalan dengan relatif lambat.
-        - (b) Waktu pencarian sebanding dengan jumlah elemen array.
-- 2) Data yang sudah terurut :
-        - (a) Dapat meningkatkan kinerja pencarian.
-        - (b) Karena dapat segera menyimpulkan bahwa data yang dicari tidak terdapat di dalam array bila ditemukan
+- Data yang belum terurut :
+    - (a) Secara umum pencarian berjalan dengan relatif lambat.
+    - (b) Waktu pencarian sebanding dengan jumlah elemen array.
+- Data yang sudah terurut :
+    - (a) Dapat meningkatkan kinerja pencarian.
+    - (b) Karena dapat segera menyimpulkan bahwa data yang dicari tidak terdapat di dalam array bila ditemukan
           terhadap elemen data array yang dicari
 
 
@@ -25,12 +25,11 @@ B. Binary Search
 Algoritma binary search merupakan salah satu algoritma yang digunakan untuk melakukan proses pencarian data yang sudah terurut. Jika data belum terurut maka harus dilakukan proses pengurutan (sorting) terlebih dahulu. Yang artinya proses pencarian data tidak akan dapat dilakukan jika data tidak terurut.
 
 Langkah-langkah pengerjaan dari teknik pencarian biner dapat dijelaskan sebagai berikut:
-        - 1) Mula-mula diambil posisi awal 0 dan posisi akhir = N – 1
-        - 2) Menentukan posisi data tengah dengan rumus (posisi awal + posisi akhir) / 2.
-        - 3) Elemen Data yang dicari dibandingkan dengan elemen data tengah.
-        - 4) Jika lebih kecil, proses dilakukan kembali tetapi posisi akhir dianggap sama dengan posisi tengah –1.
-        - 5) Jika lebih besar, porses dilakukan kembali tetapi posisi awal dianggap sama dengan posisi tengah + 1.
-        Demikian seterusnya sampai data tengah sama dengan yang dicari.
+- Mula-mula diambil posisi awal 0 dan posisi akhir = N – 1
+- Menentukan posisi data tengah dengan rumus (posisi awal + posisi akhir) / 2.
+- Elemen Data yang dicari dibandingkan dengan elemen data tengah.
+- Jika lebih kecil, proses dilakukan kembali tetapi posisi akhir dianggap sama dengan posisi tengah –1.
+- Jika lebih besar, porses dilakukan kembali tetapi posisi awal dianggap sama dengan posisi tengah + 1. Demikian seterusnya sampai data tengah sama dengan yang dicari.
 
 
 ## Guided 
