@@ -18,6 +18,6 @@ int main() {
     cout << "Enter a sentence: ";
     getline(cin, sentence);
     int result = countVokal(sentence);
-    std::cout << "Banyaknya huruf vokal : " << result << endl;
+    cout << "Banyaknya huruf vokal : " << result << endl;
     return 0;
 }
