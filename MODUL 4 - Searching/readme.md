@@ -7,7 +7,7 @@ Berikan penjelasan teori terkait materi modul ini dengan bahasa anda sendiri ser
 
 ## Guided 
 
-### 1. [Nama Topik]
+### 1. Buatlah sebuah project dengan menggunakan sequential search sederhana untuk melakukan pencarian data
 
 ```C++
 #include <iostream>
@@ -38,13 +38,13 @@ int main () {
 Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
 
 
-### 2. [Nama Topik]
+### 2. Buatlah sebuah project untuk melakukan pencarian data dengan menggunakan Binary Search
 
 ```C++
 #include <iostream>
-using namespace std;
 #include <conio.h>
 #include <iomanip>
+using namespace std;
 
 int data[7] = {1, 8, 2, 5, 4, 9, 7};
 int cari;
@@ -83,7 +83,7 @@ void binarysearch ()
             b_flag = 1;
             break;
         }
-        else if(data[tengah] << cari)
+        else if(data[tengah] < cari)
             awal = tengah + 1;
         else
             akhir = tengah -1;
@@ -124,7 +124,7 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 
 ## Unguided 
 
-### 1. [Soal]
+### 1. Buatlah sebuah program untuk mencari sebuah huruf pada sebuah kalimat yang sudah di input dengan menggunakan Binary Search!
 
 ```C++
 #include <iostream>

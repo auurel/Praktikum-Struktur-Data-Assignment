@@ -1,7 +1,7 @@
 #include <iostream>
-using namespace std;
 #include <conio.h>
-#include <iomanip>
+#include <iomanip> 
+using namespace std;
 
 int data[7] = {1, 8, 2, 5, 4, 9, 7};
 int cari;
@@ -40,7 +40,7 @@ void binarysearch ()
             b_flag = 1;
             break;
         }
-        else if(data[tengah] << cari)
+        else if(data[tengah] < cari)
             awal = tengah + 1;
         else
             akhir = tengah -1;
