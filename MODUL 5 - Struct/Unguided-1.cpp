@@ -3,7 +3,7 @@
 
 using namespace std;
 
-struct buku {
+struct Buku {
     string judul_buku[5];
     string pengarang[5];
     string penerbit[5];
@@ -11,41 +11,52 @@ struct buku {
     double harga_buku[5];
 };
 
+void display(Buku buku) {
+    for (int i = 0; i < 5; i++) {
+        cout << "Judul Buku: " << buku.judul_buku[i] << endl;
+        cout << "Pengarang: " << buku.pengarang[i] << endl;
+        cout << "Penerbit: " << buku.penerbit[i] << endl;
+        cout << "Tebal Halaman: " << buku.tebal_halaman[i] << endl;
+        cout << "Harga Buku: " << buku.harga_buku[i] << endl;
+        cout << "\n";
+    }
+}
+
 int main() {
-    // Initialize the buku struct
-    buku book;
+    Buku buku1;
 
-    // Assign values to each field of the struct
-    book.judul_buku[0] = "Book Title 1";
-    book.pengarang[0] = "Author 1";
-    book.penerbit[0] = "Publisher 1";
-    book.tebal_halaman[0] = 100;
-    book.harga_buku[0] = 15.99;
+    buku1.judul_buku[0] = "Buku 1";
+    buku1.pengarang[0] = "Pengarang 1";
+    buku1.penerbit[0] = "Penerbit 1";
+    buku1.tebal_halaman[0] = 100;
+    buku1.harga_buku[0] = 10000;
 
-    // Assign values to the other fields of the struct
-    book.judul_buku[1] = "Book Title 2";
-    book.pengarang[0] = "Author 1";
-    book.penerbit[0] = "Publisher 1";
-    book.tebal_halaman[0] = 100;
-    book.harga_buku[0] = 15.99;
+    buku1.judul_buku[1] = "Buku 2";
+    buku1.pengarang[1] = "Pengarang 2";
+    buku1.penerbit[1] = "Penerbit 2";
+    buku1.tebal_halaman[1] = 200;
+    buku1.harga_buku[1] = 20000;
 
-    // Assign values to the other fields of the struct
-    book.judul_buku[1] = "Book Title 2";
-    book.pengarang[0] = "Author 1";
-    book.penerbit[0] = "Publisher 1";
-    book.tebal_halaman[0] = 100;
-    book.harga_buku[0] = 15.99;
+    buku1.judul_buku[2] = "Buku 3";
+    buku1.pengarang[2] = "Pengarang 3";
+    buku1.penerbit[2] = "Penerbit 3";
+    buku1.tebal_halaman[2] = 300;
+    buku1.harga_buku[2] = 30000;
 
-    // Display the values of each field of the struct
-    cout << "Book 1: " << endl;
-    cout << "Title: " << book.judul_buku[0] << endl;
-    cout << "Author: " << book.pengarang[0] << endl;
-    cout << "Publisher: " << book.penerbit[0] << endl;
-    cout << "Pages: " << book.tebal_halaman[0] << endl;
-    cout << "Price: $" << book.harga_buku[0] << endl;
+    buku1.judul_buku[3] = "Buku 4";
+    buku1.pengarang[3] = "Pengarang 4";
+    buku1.penerbit[3] = "Penerbit 4";
+    buku1.tebal_halaman[3] = 400;
+    buku1.harga_buku[3] = 40000;
 
-    // Display the values of the other fields of the struct
-    // ... and so on
+    buku1.judul_buku[4] = "Buku 5";
+    buku1.pengarang[4] = "Pengarang 5";
+    buku1.penerbit[4] = "Penerbit 5";
+    buku1.tebal_halaman[4] = 500;
+    buku1.harga_buku[4] = 50000;
+    // ... and so on for the other elements of the array
+
+    display(buku1);
 
     return 0;
 }
