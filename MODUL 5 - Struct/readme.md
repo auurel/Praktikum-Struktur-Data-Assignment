@@ -4,13 +4,14 @@
 
 ## Dasar Teori
 
+
 ## Pengertian Struct
 
-Dalam bahasa C++ ```struct``` merupakan struktur data yang memungkinkan terjadinya pembentukan tipe data baru dengan menggabungkan berbagai macam variabel dengan tipe data berbeda yang tersedia dalam C++. Tipe data yang baru dapat dibentuk diluar tipe data yang sudah ada dengan menggabungkan beberapa tipe data tersebut sesuai dengan program yang dibutuhkan.
+Dalam bahasa C++ struct merupakan struktur data yang memungkinkan terjadinya pembentukan tipe data baru dengan menggabungkan berbagai macam variabel dengan tipe data berbeda yang tersedia dalam C++. Tipe data yang baru dapat dibentuk diluar tipe data yang sudah ada dengan menggabungkan beberapa tipe data tersebut sesuai dengan program yang dibutuhkan.
 
-Berbeda dengan ```array``` yang memungkinkan penyimpangan beberapa tipe data yang sama, ```struct``` dapat menyimpan dan menggabungkan berbagai variabel dengan tipe data yang berbeda. Misalkan data mengenai nama, NIM, program studi, dan universitas. Keempat data tersebut memiliki tipe data yang berbeda tetapi masih bisa digolongkan dalam satu kelompok yaitu data mahasiswa.
+Berbeda dengan array yang memungkinkan penyimpangan beberapa tipe data yang sama, struct dapat menyimpan dan menggabungkan berbagai variabel dengan tipe data yang berbeda. Misalkan data mengenai nama, NIM, program studi, dan universitas. Keempat data tersebut memiliki tipe data yang berbeda tetapi masih bisa digolongkan dalam satu kelompok yaitu data mahasiswa.
 
-Berbagai variabel yang membangun suatu struktur juga disebut sebagai elemen atau anggota struktur. Penggunaan ```struct``` memudahkan pemetaan entitas dari sebuah kehidupan yang nyata ataupun suatu model dengan penyimpanan dan handling dalam C++.
+Berbagai variabel yang membangun suatu struktur juga disebut sebagai elemen atau anggota struktur. Penggunaan struct memudahkan pemetaan entitas dari sebuah kehidupan yang nyata ataupun suatu model dengan penyimpanan dan handling dalam C++.
 
 ## Notasi Struct
 
@@ -136,6 +137,29 @@ int main() {
 }
 ```
 
+Kode di atas merupakan program yang mendefinisikan tiga struktur: 'hewan', 'hewanDarat', 'hewanLaut'. Masing-masing struktur mewakili hewan yang berbeda karakteristiknya.
+
+Struktur 'hewan' mewakili hewan umum, dengan atribut-atribut berikut:
+- 'namaHewan' : nama hewan
+- 'jenisKelamin' : jenis kelamin hewan (jantan atau betina)
+- 'caraBerkembangbiak' : cara hewan bereproduksi (misalnya bertelur, melahirkan)
+- 'alatPernapasan' : sistem pernafasan hewan (misalnya, paru-paru, insang)
+- 'tempatHidup' : habitat atau lingkungan hidup hewan
+- 'Karnivora' : boolean yang menunjukan apakah hewan adalah karnivora (pemakan daging)
+
+Struktur 'hewanDarat' mewakili hewan darat (hewan yang hidup di darat) dengan atribut-atribut berikut:
+- 'jumlahKaki' : jumlah kaki hewan
+- 'menyusui' : boolean yang menunjukkan apakah hewan menyusui anaknya
+- 'suara' : suara atau vokalisasi hewan
+
+Struktur 'hewanLaut' mewakili hewan laut (hewan yang hidup di air), dengan atribut-atribut berikut:
+- 'bentukSirip' : bentuk sirip hewan
+- 'bentukPertahananDiri' : mekanisme pertahanan diri hewan (misalnya, cangkang, duri)
+
+Kemudian program tersebut mencetak atribut-atribut dari masing-masing hewan, menggunakan struktur untuk mengakses dan mencetak informasi yang relevan. Misalnya, untuk serigala, program mencetak nama, jenis kelamin, cara bereproduksi, sistem pernafasan, habitat, dan apakah hewan tersebut karnivora. Untuk kelinci, program mencetak jumlah kaki, apakah hewan menyusui anaknya, dan suara. Untuk ikan, program mencetak bentuk sirip dan mekanisme pertahanan diri.
+
+Dalam keseluruhan, kode di atas menunjukkan bagaimana definisi dan penggunaan struktur untuk mewakili tipe data yang berbeda, serta bagaimana membuat instance dari struktur untuk mewakili objek yang spesifik.
+
 ## Unguided 
 
 ### 1. Modifikasi tugas guided pertama, sehingga setiap item yang terdapat pada struct buku berupa array yang berukuran 5, isi dengan data kemudian tampilkan.
@@ -197,7 +221,6 @@ int main() {
     buku1.penerbit[4] = "Penerbit 5";
     buku1.tebal_halaman[4] = 500;
     buku1.harga_buku[4] = 50000;
-    // ... and so on for the other elements of the array
 
     display(buku1);
 
@@ -207,16 +230,94 @@ int main() {
 #### Output:
 ![unguided-1](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/fe8ef197-5bac-48d6-80b0-c6f14cbd357e)
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas merupakan salah satu program yang menggunakan struktur 'Buku' untuk menyimpan informasi tentang beberapa buku dan kemudian menginisialisasi beberapa buku dan menampilkan informasi terkait buku-buku tersebut menggunakan fungsi 'display'
 
-#### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)
+Struktur 'Buku' memiliki beberapa array untuk menyimpan informasi buku, yaitu:
+- 'judul_buku' : array untuk menyimpan judul buku
+- 'pengarang' : array untuk menyimpan nama pengarang
+- 'penerbit' : array untuk menyimpan jumlah halaman buku
+- 'tebal_halaman' : array untuk menyimpan jumlah halaman buku
+- 'harga_buku' : array untuk menyimpan harga buku
+
+Fungsi 'display' digunakan untuk menampilkan informasi buku yang telah disimpan di dalam struktur 'Buku'. Fungsi tersebut melakukan iterasi melalui array buku dan mencetak judul buku, pengarang, penerbit, tebal halaman, dan harga buku untuk setiap buku.
+
+Di dalam fungsi 'main', program menginisialisasi variabel 'buku1' dari tipe 'Buku'. Lalu program mengisi informasi untuk lima buku yang berbeda kedalam array-array yang ada di dalam 'buku1'
+Setelah semua informasi buku terisi, program memanggil fungsi 'display' dengan parameter 'buku1' untuk menamilkan informasi buku-buku yang telah diinisialisasi sebelumnya.
+Dengan demikian, kode di atas bertujuan untuk menyimpan dan menampilkan informasi tentang beberapa buku menggunakan struktur dan array.
+
+
+### 2.  Apa yang terjadi jika deklarasi variabel struct yang dibuat pada tugas guided I berjenis Array. Bagaimana cara mengisi data dan menampilkannya ?
+
+Jika kita membuat guide I berjenis array, maka kode akan lebih sistematis karena array lebih cocok digunakkan untuk mengakses elemen-elemen yang memiliki indeks. Sedamgkan struct lebih cocok digunakan untuk mengakses field-field yang berbeda. Dalam syntax, array diinisialisasi dengan menggunakan kurung siku [], seperti int array[5];. Sedangkan struct diinisialisasi dengan menggunakan keyword struct, seperti struct Buku { string judul_buku; string pengarang; };.
+
+Jika tugas guided Iberjenis array, maka berikut adalah cara mengisi data dan menampilkannya:
+
+#### Deklarasi Struct Array
+Deklarasi struct array dilakukan dengan menggunakan keyword 'struct' dan nama struct, diikuti oleh nama field yang akan diisi. 
+
+```C++
+struct Buku {
+    string judul_buku[5];
+    string pengarang[5];
+    int tebal_halaman[5];
+    double harga_buku[5];
+};
+```
+
+#### Mengisi Data
+Mengisi data struct array dilakukan dengan mengakses field-field menggunakan indeks. Contoh:
+
+```C++
+Buku buku1;
+
+buku1.judul_buku[0] = "Buku 1";
+buku1.pengarang[0] = "Pengarang 1";
+buku1.tebal_halaman[0] = 100;
+buku1.harga_buku[0] = 10000;
+
+buku1.judul_buku[1] = "Buku 2";
+buku1.pengarang[1] = "Pengarang 2";
+buku1.tebal_halaman[1] = 200;
+buku1.harga_buku[1] = 20000;
+```
+
+#### Menampilkan Data
+Menampilkan data struct array dilakukan dengan mengakses field-field menggunakan index dan mencetak nilai-nilai yang tersimpan. Contoh:
+
+```C++
+void display(Buku buku) {
+    for (int i = 0; i < 5; i++) {
+        cout << "Judul Buku: " << buku.judul_buku[i] << endl;
+        cout << "Pengarang: " << buku.pengarang[i] << endl;
+        cout << "Tebal Halaman: " << buku.tebal_halaman[i] << endl;
+        cout << "Harga Buku: " << buku.harga_buku[i] << endl;
+        cout << endl;
+    }
+}
+
+int main() {
+    Buku buku1;
+
+    // Mengisi data
+    buku1.judul_buku[0] = "Buku 1";
+    buku1.pengarang[0] = "Pengarang 1";
+    buku1.tebal_halaman[0] = 100;
+    buku1.harga_buku[0] = 10000;
+
+    // Menampilkan data
+    display(buku1);
+
+    return 0;
+}```
 
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+
+- Pemakaian struktur data yang tepat di dalam proses pemrograman akan menghasilkan algoritma yang lebih jelas dan tepat, sehingga menjadikan program secara keseluruhan lebih efisien dan sederhana
+
+- Secara umum struktur data terdiri dari beberapa bagian seperti himpunan nilai-nilai datadan sejumlah operasi dasar yang bekerja pada data tersebut menurut suatu algoritma tertentu
+
 
 ## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
 
-[2] Dwi Putra, Muhammad T., et al. BELAJAR PEMROGRAMAN LANJUT DENGAN C++. Edited by Damayanti, Evi, CV WIDINA MEDIA UTAMA; 2023.
+[1] Dwi Putra, Muhammad T., et al. BELAJAR PEMROGRAMAN LANJUT DENGAN C++. Edited by Damayanti, Evi, CV WIDINA MEDIA UTAMA; 2023.
