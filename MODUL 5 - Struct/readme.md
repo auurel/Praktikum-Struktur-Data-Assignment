@@ -308,7 +308,8 @@ int main() {
     display(buku1);
 
     return 0;
-}```
+}
+```
 
 
 ## Kesimpulan
