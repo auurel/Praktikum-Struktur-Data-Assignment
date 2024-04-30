@@ -2,18 +2,22 @@
 using namespace std;
 
 class Node {
-    public:int data;
-    Node* prev;
+public:
+    int data;
+    Node* prev; // Previous digunakan untuk melihat data sebelumnya
     Node* next;
 };
+
 class DoublyLinkedList {
-        public:
-        Node* head;
-        Node* tail;
-        DoublyLinkedList() {
-            head = nullptr;
-            tail = nullptr;
+public:
+    Node* head;
+    Node* tail;
+
+    DoublyLinkedList() {
+        head = nullptr;
+        tail = nullptr;
     }
+
     void push(int data) {
         Node* newNode = new Node;
         newNode->data = data;
@@ -21,12 +25,12 @@ class DoublyLinkedList {
         newNode->next = head;
         if (head != nullptr) {
             head->prev = newNode;
-        } 
-        else {
+        } else {
             tail = newNode;
         }
         head = newNode;
     }
+
     void pop() {
         if (head == nullptr) {
             return;
@@ -35,22 +39,24 @@ class DoublyLinkedList {
         head = head->next;
         if (head != nullptr) {
             head->prev = nullptr;
-        } 
-        else {
+        } else {
             tail = nullptr;
         }
         delete temp;
     }
+
     bool update(int oldData, int newData) {
-        Node* current = head;while (current != nullptr) {
+        Node* current = head;
+        while (current != nullptr) {
             if (current->data == oldData) {
                 current->data = newData;
                 return true;
             }
-            current = current->next;
+            current = current->next; // Akan next terus sampai currentnya berhenti
         }
         return false;
     }
+
     void deleteAll() {
         Node* current = head;
         while (current != nullptr) {
@@ -61,6 +67,7 @@ class DoublyLinkedList {
         head = nullptr;
         tail = nullptr;
     }
+
     void display() {
         Node* current = head;
         while (current != nullptr) {
@@ -79,7 +86,8 @@ int main() {
         cout << "3. Update data" << endl;
         cout << "4. Clear data" << endl;
         cout << "5. Display data" << endl;
-        cout << "6. Exit" << endl;int choice;
+        cout << "6. Exit" << endl;
+        int choice;
         cout << "Enter your choice: ";
         cin >> choice;
         switch (choice) {
@@ -125,4 +133,3 @@ int main() {
     }
     return 0;
 }
-
