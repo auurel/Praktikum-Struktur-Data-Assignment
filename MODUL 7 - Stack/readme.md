@@ -31,8 +31,6 @@ Konsep ini mirip dengan tumpukan buku, di mana buku yang terakhir diletakkan di 
 
 ## Guided 
 
-### 1. [Nama Topik]
-
 ```C++
 #include <iostream>
 using namespace std;
@@ -141,15 +139,37 @@ int main() {
 
     return 0;
 }
-
-
-
 ```
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
 
+#### Output
+
+![Screenshot (1383)](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/8bee933f-9fd5-4d64-bfef-efed844b5796)
+
+Kode di atas menunjukkan fungsi-fungsi yang dilakukan pada stack array buku.
+- Push Array Buku: Fungsi ini menambahkan data ke stack. Contohnya data "Kalkulus", "Struktur Data", "Matematika Diskrit", "Dasar Multimedia", dan "Inggris" ditambahkan ke stack.
+- Cetak Array Buku: Fungsi ini mencetak semua data yang ada di stack.
+  Dalam contoh, semua data yang telah ditambahkan ke stack dicetak.
+- Apakah Data Stack Penuh?: Fungsi ini memeriksa apakah stack sudah penuh.
+  Dalam contoh, stack masih memiliki ruang untuk menambahkan data lain.
+- Apakah Data Stack Kosong?: Fungsi ini memeriksa apakah stack sudah kosong.
+  Dalam contoh, stack masih memiliki data yang ditambahkan sebelumnya.
+- Peek Array Buku: Fungsi ini menampilkan data di posisi yang ditentukan.
+  Dalam contoh, data di posisi ke-2 ("Matematika Diskrit") ditampilkan.
+- Pop Array Buku: Fungsi ini menghapus data di posisi yang ditentukan.
+  Dalam contoh, data di posisi ke-2 ("Matematika Diskrit") dihapus.
+- Banyaknya Data: Fungsi ini mencetak jumlah data yang ada di stack.
+  Dalam contoh, jumlah data yang ada di stack adalah 4.
+- Change Array Buku: Fungsi ini mengubah data di posisi yang ditentukan.
+  Dalam contoh, data di posisi ke-2 diubah menjadi "Bahasa Jerman".
+- Destroy Array Buku: Fungsi ini menghapus semua data di stack dan mengembalikan stack ke kondisi awal.
+  Dalam contoh, semua data di stack dihapus dan jumlah data di stack menjadi 0.
+- Cetak Array Buku (Setelah Destroy): Fungsi ini mencetak semua data yang ada di stack.
+  Dalam contoh, tidak ada data yang dicetak karena stack sudah kosong.
+
+  
 ## Unguided 
 
-### 1. [Soal]
+### 1. Buatlah program untuk menentukan apakah kalimat tersebut yang diinputkan dalam program stack adalah palindrom/tidak. Palindrom kalimat yang dibaca dari depan dan belakang sama. Jelaskan bagaimana cara kerja programnya.
 
 ```C++
 #include <iostream>
@@ -191,14 +211,22 @@ int main() {
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+![Screenshot (1382)](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/ec86da1f-56f0-40f0-af01-27dcc79110bb)
+
+
+Kode di atas digunakan untuk mengecek apakah sebuah kata atau kalimat adalah palindrom atau tidak. Palindrom adalah kata atau kalimat yang dibaca dari depan dan belakang sama.
+Kode tersebut menggunakan stack untuk memasukkan setiap karakter dari kata yang diinputkan dan kemudian membandingkan setiap karakter dengan karakter yang terakhir ditambahkan ke stack. Jika setiap karakter cocok, maka kata/kalimat tersebut adalah palindrom.
+Output dari kode tersebut akan menampilkan hasil pengecekan apakah kata yang diinputkan adalah palindrom atau tidak. Jika kata tersebut adalah palindrom, maka output akan berupa "Kata/Kalimat Tersebut Palindrom". Jika tidak, maka output akan berupa "Kata/Kalimat Tersebut Bukan Palindrom". 
+
+Dalam contoh di atas, "isi" adalah palindrom karena dibaca dari depan dan belakang sama, sedangkan "orel orel" bukan palindrom karena jika dibaca dari depan atau belakang tidak sama.
 
 #### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)
 
-### 2. [Soal]
+![Screenshot (1382)](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/1074c42f-223b-4b53-9241-06890863ef4e)
+
+
+### 2. Buatlah program untuk melakukan pembalikan terhadap kalimat menggunakan stack dengan minimal 3 kata. Jelaskan output program dan source codenya beserta operasi/fungsi yang dibuat?
 
 ```C++
 #include <iostream>
@@ -241,16 +269,24 @@ int main() {
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+![Screenshot (1381) unguided-2](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/5105bc21-7bda-4ea0-9ccf-a8b0f45c1bc7)
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+
+Kode di atas digunakan untuk mengubah urutan kalimat yang diinputkan. Kode tersebut menggunakan stack untuk memasukkan setiap karakter dari kalimat dan kemudian mengeluarkan karakter-karakter tersebut dari stack untuk mengubah urutan kalimat.
+Output dari kode tersebut akan menampilkan kalimat yang diinputkan dengan urutan yang dibalikkan. Jika input adalah "", maka output akan berupa "dlroW olleH".
+
+Contoh output jika input adalah "orel membeli bubur"
+Dalam contoh di atas, kalimat "orel membeli bubur" diinputkan dan kemudian urutan kalimat dibalikkan menjadi "rubub ilebmem lero".
 
 #### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)
+
+![Screenshot (1381)](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/5f5f0350-ae7b-4272-9851-4521c79c9533)
 
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+Stack adalah suatu koleksi atau kumpulan item data yang terorganisasi dalam bentuk urutan linier, yang operasi pemasukan dan penghapusan datanya dilakukan pada salah satu sisinya. Karakteristik khas dari stack adalah penggunaan aturan LIFO (Last In, First Out). Artinya, data yang terakhir dimasukkan ke dalam stack akan menjadi data pertama yang diambil atau dikeluarkan. 
 
 ## Referensi
 [1] G. M. Putri, K. A. D. Pradja, M. B. Azizi, P. Nurwahid, A. S. Perdana, and M. ., “Implementasi Stack dan Array pada Pengurutan Lagu dengan Metode Selection Sort”, JTEKSIS, vol. 6, no. 2, pp. 286-296, Apr. 2024.
+[2] Anita Sindar, R. M. S. (2019). Struktur Data Dan Algoritma Dengan C++ (Vol. 1). CV. AA. RIZKY.
+[3] Sulasmoro, A. H. (2022). Buku ajar algoritma dan pemrograman I. Penerbit P4I.
