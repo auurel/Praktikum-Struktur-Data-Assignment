@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/aurel/Praktikum Struktur Data",
-      "program": "c:/aurel/Praktikum Struktur Data/build/Debug/outDebug",
+      "cwd": "c:/aurel/Praktikum Struktur Data/MODUL 7 - Stack",
+      "program": "c:/aurel/Praktikum Struktur Data/MODUL 7 - Stack/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
