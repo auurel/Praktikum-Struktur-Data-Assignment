@@ -226,6 +226,7 @@ Dalam contoh di atas, "isi" adalah palindrom karena dibaca dari depan dan belaka
 ![Screenshot (1382)](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/1074c42f-223b-4b53-9241-06890863ef4e)
 
 
+
 ### 2. Buatlah program untuk melakukan pembalikan terhadap kalimat menggunakan stack dengan minimal 3 kata. Jelaskan output program dan source codenya beserta operasi/fungsi yang dibuat?
 
 ```C++
@@ -288,5 +289,7 @@ Stack adalah suatu koleksi atau kumpulan item data yang terorganisasi dalam bent
 
 ## Referensi
 [1] G. M. Putri, K. A. D. Pradja, M. B. Azizi, P. Nurwahid, A. S. Perdana, and M. ., “Implementasi Stack dan Array pada Pengurutan Lagu dengan Metode Selection Sort”, JTEKSIS, vol. 6, no. 2, pp. 286-296, Apr. 2024.
+
 [2] Anita Sindar, R. M. S. (2019). Struktur Data Dan Algoritma Dengan C++ (Vol. 1). CV. AA. RIZKY.
+
 [3] Sulasmoro, A. H. (2022). Buku ajar algoritma dan pemrograman I. Penerbit P4I.
