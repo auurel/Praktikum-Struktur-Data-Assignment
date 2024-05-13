@@ -273,9 +273,6 @@ Fungsi-fungsi yang tersedia dalam kode ini meliputi:
 
 Output di atas menunjukkan bahwa antrian awalnya berisi dua nama teller, yaitu "Andi" dan "Maya". Kemudian, "Andi" dihapus dari antrian. Setelah itu, antrian dihapus semua, sehingga menjadi kosong.
 
-#### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)
-
 
 ### 2. Dari nomor 1 buatlah konsep antri dengan atribut Nama mahasiswa dan NIM Mahasiswa
 
@@ -386,9 +383,6 @@ int main() {
 ![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
 
 Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
-
-#### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)
 
 
 ## Kesimpulan
