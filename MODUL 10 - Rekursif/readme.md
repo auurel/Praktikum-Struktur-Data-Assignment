@@ -209,7 +209,7 @@ Proses rekursif tidak langsung berjalan sebagai berikut:
 
 
 ## Kesimpulan
-Priority Queue adalah konsep penting dalam algoritma yang membantu kita mengelola dan mengatur data dengan nilai prioritas tertentu. Implementasinya dalam struktur data seperti heap atau binary search tree memungkinkan operasi penyisipan dan penghapusan elemen dalam waktu logaritmik, yang sangat berguna dalam berbagai algoritma. Dengan pemahaman tentang Priority Queue, kita dapat meningkatkan efisiensi dan efektivitas algoritma yang kita gunakan dalam menyelesaikan masalah.
+
 
 ## Referensi
 [1] Sjukani M, “Struktur data dengan C++(Algoritma dan Struktur Data 2 dengan C, C++)”, Mitra Wacana Media, 2007
