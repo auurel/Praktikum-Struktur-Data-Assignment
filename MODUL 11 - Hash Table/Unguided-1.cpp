@@ -40,7 +40,7 @@ public:
 
     void deleteMahasiswa(string NIM) {
         int index = hashFunction(NIM);
-        for (auto it = table[index].begin(); it!= table[index].end(); ++it) {
+        for (auto it = table[index].begin(); it != table[index].end(); ++it) {
             if (it->NIM == NIM) {
                 table[index].erase(it);
                 return;
@@ -48,20 +48,20 @@ public:
         }
     }
 
-    Mahasiswa* findMahasiswaByNIM(string NIM) {
+    Mahasiswa findMahasiswaByNIM(string NIM) {
         int index = hashFunction(NIM);
-        for (auto it = table[index].begin(); it!= table[index].end(); ++it) {
+        for (auto it = table[index].begin(); it != table[index].end(); ++it) {
             if (it->NIM == NIM) {
-                return &(*it);
+                return *it;
             }
         }
-        return nullptr;
+        return Mahasiswa();
     }
 
     list<Mahasiswa> findMahasiswaByNilai(int lower, int upper) {
         list<Mahasiswa> result;
         for (int i = 0; i < size; ++i) {
-            for (auto it = table[i].begin(); it!= table[i].end(); ++it) {
+            for (auto it = table[i].begin(); it != table[i].end(); ++it) {
                 if (it->nilai >= lower && it->nilai <= upper) {
                     result.push_back(*it);
                 }
@@ -99,6 +99,7 @@ int main() {
                 string NIM;
                 cout << "Masukkan NIM: ";
                 cin >> NIM;
+                cout << "NIM berhasil dihapus";
                 hashTable.deleteMahasiswa(NIM);
                 break;
             }
@@ -106,9 +107,9 @@ int main() {
                 string NIM;
                 cout << "Masukkan NIM: ";
                 cin >> NIM;
-                Mahasiswa* mahasiswa = hashTable.findMahasiswaByNIM(NIM);
-                if (mahasiswa!= nullptr) {
-                    cout << "Data mahasiswa ditemukan: " << mahasiswa->NIM << " - " << mahasiswa->nilai << endl;
+                Mahasiswa mahasiswa = hashTable.findMahasiswaByNIM(NIM);
+                if (mahasiswa.NIM != "") {
+                    cout << "Data mahasiswa ditemukan: " << mahasiswa.NIM << " - " << mahasiswa.nilai << endl;
                 } else {
                     cout << "Data mahasiswa tidak ditemukan" << endl;
                 }
@@ -121,7 +122,7 @@ int main() {
                 list<Mahasiswa> result = hashTable.findMahasiswaByNilai(lower, upper);
                 if (!result.empty()) {
                     cout << "Data mahasiswa ditemukan: " << endl;
-                    for (auto it = result.begin(); it!= result.end(); ++it) {
+                    for (auto it = result.begin(); it != result.end(); ++it) {
                         cout << it->NIM << " - " << it->nilai << endl;
                     }
                 } else {
