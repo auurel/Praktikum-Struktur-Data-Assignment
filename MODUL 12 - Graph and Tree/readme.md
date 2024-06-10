@@ -322,8 +322,230 @@ Dalam contoh output, program akan menampilkan grafik jaringan dengan nama-nama k
 Perubahan yang dilakukan adalah mengganti nama variabel `numCities` dengan `aurel_2311110020`.
 
 
-### 2.
+### 2. Modifikasi guided tree diatas dengan program menu menggunakan input data tree dari user dan berikan fungsi tambahan untuk menampilkan node child dan descendant dari node yang diinput kan!
 
+```c++
+#include <iostream>
+using namespace std;
+
+// Definisi struktur pohon
+struct pohon {
+    pohon* kanan;
+    char data;
+    pohon* kiri;
+};
+
+// Deklarasi variabel global
+pohon* simpul;
+pohon* root;
+pohon* saatIni;
+pohon* helperA;
+pohon* helperB;
+pohon* alamat[256];
+
+// Fungsi untuk inisialisasi root
+void inisialisasi() {
+    root = NULL;
+}
+
+// membuat simpul baru
+void simpulBaru(char dataMasukkan) {
+    simpul = new pohon;
+    simpul->data = dataMasukkan;
+    simpul->kanan = NULL;
+    simpul->kiri = NULL;
+}
+
+// membuat simpul akar
+void simpulAkar() {
+    if (root == NULL) {
+        // Jika root belum ada, minta input data dan buat root
+        char dataAnda;
+        cout << "Silahkan masukkan data: ";
+        cin >> dataAnda;
+        simpulBaru(dataAnda);
+        root = simpul;
+        cout << "Root terbentuk..." << endl;
+    } else {
+        cout << "Root sudah ada..." << endl;
+    }
+}
+
+// menambah simpul
+void tambahSimpul() {
+    if (root != NULL) {
+         // Inisialisasi variabel untuk traversal dan penanda
+        int i = 1, j = 1, penanda = 0;
+        char dataUser;
+        alamat[i] = root;
+
+        while (penanda == 0 && j < 256) {
+            // Input data untuk simpul kiri
+            cout << "Masukkan data kiri (0 untuk berhenti): ";
+            cin >> dataUser;
+            if (dataUser != '0') {
+                simpulBaru(dataUser);
+                saatIni = alamat[i];
+                saatIni->kiri = simpul;
+                j++;
+                alamat[j] = simpul;
+            } else {
+                penanda = 1;
+                j++;
+                alamat[j] = NULL;
+            }
+            if (penanda == 0) {
+                // Input data untuk simpul kanan
+                cout << "Masukkan data kanan (0 untuk berhenti): ";
+                cin >> dataUser;
+                if (dataUser != '0') {
+                    simpulBaru(dataUser);
+                    saatIni = alamat[i];
+                    saatIni->kanan = simpul;
+                    j++;
+                    alamat[j] = simpul;
+                } else {
+                    penanda = 1;
+                    j++;
+                    alamat[j] = NULL;
+                }
+            }
+            i++;
+        }
+    }
+}
+
+// Fungsi untuk traversal pre-order
+void preOrder(pohon* node) {
+    if (node != NULL) {
+        cout << node->data << " ";
+        preOrder(node->kiri);
+        preOrder(node->kanan);
+    }
+}
+
+// Fungsi untuk traversal in-order
+void inOrder(pohon* node) {
+    if (node != NULL) {
+        inOrder(node->kiri);
+        cout << node->data << " ";
+        inOrder(node->kanan);
+    }
+}
+
+// Fungsi untuk traversal post-order
+void postOrder(pohon* node) {
+    if (node != NULL) {
+        postOrder(node->kiri);
+        postOrder(node->kanan);
+        cout << node->data << " ";
+    }
+}
+
+// menampilkan menu
+void tampilkanMenu() {
+    cout << "Menu:" << endl;
+    cout << "1. Tambah Root" << endl;
+    cout << "2. Tambah Simpul" << endl;
+    cout << "3. Tampilkan Pre-order" << endl;
+    cout << "4. Tampilkan In-order" << endl;
+    cout << "5. Tampilkan Post-order" << endl;
+    cout << "6. Keluar" << endl;
+    cout << "Pilih opsi: ";
+}
+
+// Fungsi utama
+int main() {
+    // Inisialisasi pohon
+    inisialisasi();
+    int pilihan;
+    do {
+        // Tampilkan menu dan minta input pilihan user
+        tampilkanMenu();
+        cin >> pilihan;
+        switch (pilihan) {
+            case 1:
+            // Tambah root
+                simpulAkar();
+                break;
+            case 2:
+                // Tambah simpul
+                tambahSimpul();
+                break;
+            case 3:
+                // Tampilkan traversal pre-order
+                cout << "Pre-order: ";
+                preOrder(root);
+                cout << endl;
+                break;
+            case 4:
+                // Tampilkan traversal in-order
+                cout << "In-order: ";
+                inOrder(root);
+                cout << endl;
+                break;
+            case 5:
+                // Tampilkan traversal post-order
+                cout << "Post-order: ";
+                postOrder(root);
+                cout << endl;
+                break;
+            case 6:
+                // Keluar dari program
+                cout << "Keluar dari program." << endl;
+                break;
+            default:
+                cout << "Opsi tidak valid. Silakan coba lagi." << endl;
+                break;
+        }
+    } while (pilihan != 6);
+    
+    cout << " " << endl;
+    cout << " " << endl;
+    cout << "By: Aurel (2311110020)" << endl;
+    return 0;
+}
+```
+- Tambah Root
+Ketika pengguna memilih opsi ini, program akan meminta pengguna untuk memasukkan data untuk simpul akar (root) jika belum ada root yang dibuat sebelumnya.
+
+![tambah root](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/683d439d-16b4-4e74-a394-2161df4ad9fe)
+
+
+- Tambah Simpul
+Ketika pengguna memilih opsi ini, program akan meminta pengguna untuk memasukkan data untuk simpul kiri dan kanan dari setiap simpul secara berturut-turut hingga pengguna memasukkan '0' untuk berhenti menambah simpul.
+
+![tambah simpul](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/d8006552-77f5-4ea9-bcdb-b32fe7823c83)
+
+
+- Tampilkan Pre-Order
+Ketika pengguna memilih opsi ini, program akan menampilkan traversal pre-order dari pohon biner, yaitu mencetak data simpul dalam urutan root, kiri, kanan.
+
+![preorder root](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/aaeec326-d87e-4329-8014-acbafb304fb4)
+
+
+- Tampilkan In-Order
+Ketika pengguna memilih opsi ini, program akan menampilkan traversal in-order dari pohon biner, yaitu mencetak data simpul dalam urutan kiri, root, kanan.
+
+![inorder root](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/b9f99b19-b217-45b3-acb6-29076f7b1361)
+
+
+- Tampilkan Post-Order
+Ketika pengguna memilih opsi ini, program akan menampilkan traversal post-order dari pohon biner, yaitu mencetak data simpul dalam urutan kiri, kanan, root.
+
+![post order root](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/1b06b9b2-5665-4347-aeaf-404bc4518116)
+
+
+- Keluar dari Program
+Ketika pengguna memilih opsi ini, program akan berhenti dan menampilkan pesan:
+
+![keluar](https://github.com/auurel/Praktikum-Struktur-Data-Assignment/assets/152810893/ae42d5c2-494e-40ad-9a96-52d0cacc8dff)
+
+-- Setiap kali pengguna memilih opsi, program akan menjalankan fungsi terkait dan mencetak hasil atau meminta input tambahan sesuai kebutuhan.
+
+-- Setelah menyelesaikan semua operasi, program akan mencetak informasi penutup dengan nama pembuat program.
+
+Hal ini memberikan gambaran lengkap tentang bagaimana program berfungsi dan bagaimana output dihasilkan berdasarkan interaksi pengguna.
 
 
 ## Kesimpulan
@@ -333,6 +555,10 @@ Graf merupakan kumpulan simpul yang terhubung oleh sisi dan digunakan untuk mere
 Tree (pohon) adalah jenis khusus dari graf yang tidak memiliki siklus. Memiliki simpul akar dan setiap simpul memiliki satu simpul induk kecuali simpul akar. Digunakan untuk representasi data hierarkis dan sering digunakan dalam struktur data seperti pohon biner. Contoh struktur direktori pada komputer.
 
 ## Referensi
-[1] Maurer, W. D., & Lewis, T. G. (1975). Hash table methods. ACM Computing Surveys (CSUR), 7(1), 5-19.
+[1] Grass, J. E., & Chen, Y. F. (1990, April). The C++ Information Abstractor. In C++ Conference (pp. 265-278).
 
-[2] Nainggolan, S. (2022). Implementasi Algoritma SHA-256 Pada Aplikasi Duplicate Document Scanner. Resolusi: Rekayasa Teknik Informatika dan Informasi, 2(5), 201-213.
+[2] Malik, D. S. (2010). Data structures using C++. USA.
+
+[3] Himawan, D. Maulana, V. Amelia, and T. Hidayat, “IMPLEMENTASI GRAF DALAM PENYIMPANAN DATA STRUKTUR BANGUNAN,” 2008. Available: https://journal.uii.ac.id/Snati/article/download/553/477. [Accessed: Jun. 08, 2024]
+
+[4] Latifah, “PENERAPAN ALGORITHMA POHON UNTUK OPERASI PENGOLAHAN DAN PENYIMPANAN DATA DALAM TEKNIK PEMROGRAMAN (KAJIAN ALGORITHMA POHON PADA TEKNIK PEMROGRAMAN),” Jurnal TECHNO Nusa Mandiri, vol. 8, no. 2, pp. 111–120, Sep. 2016, Available: https://ejournal.nusamandiri.ac.id/index.php/techno/article/download/203/179. [Accessed: Jun. 08, 2024]
