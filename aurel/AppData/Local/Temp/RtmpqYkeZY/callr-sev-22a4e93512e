@@ -1,0 +1,8 @@
+CALLR_CHILD_R_LIBS="${R_LIBS}"
+ CALLR_CHILD_R_LIBS_USER="${R_LIBS_USER}"
+ CALLR_CHILD_R_LIBS_SITE="${R_LIBS_SITE}"
+R_PROFILE="aurel\AppData\Local\Temp\RtmpqYkeZY\callr-spr-22a465c46d6a"
+R_PROFILE_USER="aurel\AppData\Local\Temp\RtmpqYkeZY\callr-upr-22a445293206"
+R_LIBS_SITE="${CALLR_CHILD_R_LIBS_SITE:-}"
+R_LIBS="${CALLR_CHILD_R_LIBS:-C:/Users/bayul/AppData/Local/R/win-library/4.3;C:/Program Files/R/R-4.3.1/library}"
+R_LIBS_USER="${CALLR_CHILD_R_LIBS_USER:-C:/Users/bayul/AppData/Local/R/win-library/4.3;C:/Program Files/R/R-4.3.1/library}"
